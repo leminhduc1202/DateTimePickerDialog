@@ -30,8 +30,24 @@ class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,Tim
         setContentView(binding.root)
 
         pickDate()
-
+        //Option 2 just show date
+        pickDate01()
     }
+    //Option 2
+    private fun pickDate01() {
+        val cal = Calendar.getInstance()
+        val year01 = cal.get(Calendar.YEAR)
+        val month01 = cal.get(Calendar.MONTH)
+        val day01 = cal.get(Calendar.DAY_OF_MONTH)
+        val hour01 = cal.get(Calendar.HOUR)
+        val minute01 = cal.get(Calendar.MINUTE)
+        binding.timePicker01.setOnClickListener {
+            val datePD = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{view, year, month, dayOfMonth ->
+                binding.timeShowText01.setText(""+ dayOfMonth + "/" + month + "/" + year)},year01,month01,day01)
+            datePD.show()
+        }
+    }//Option 2
+
 
     private fun pickDate() {
         binding.timePicker.setOnClickListener {

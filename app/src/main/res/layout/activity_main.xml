@@ -23,5 +23,23 @@
         android:textStyle="bold"
         tools:text="@tools:sample/date/ddmmyy"
         android:gravity="center"/>
+    <Button
+        android:id="@+id/timePicker01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/timePicker"
+        android:layout_marginBottom="100dp"
+        android:layout_centerInParent="true"
+        android:text="What time ?"/>
+    <TextView
+        android:id="@+id/timeShowText01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_above="@id/timePicker"
+        android:layout_marginBottom="50dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        tools:text="@tools:sample/date/ddmmyy" />
 
 </RelativeLayout>
