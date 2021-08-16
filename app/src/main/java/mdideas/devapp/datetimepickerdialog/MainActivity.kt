@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener,Tim
         val minute01 = cal.get(Calendar.MINUTE)
         binding.timePicker01.setOnClickListener {
             val datePD = DatePickerDialog(this, DatePickerDialog.OnDateSetListener{view, year, month, dayOfMonth ->
-                binding.timeShowText01.setText(""+ dayOfMonth + "/" + month + "/" + year)},year01,month01,day01)
+                binding.timeShowText01.setText(""+ dayOfMonth + "/" + month + 1 + "/" + year)},year01,month01,day01)
             datePD.show()
         }
     }//Option 2
